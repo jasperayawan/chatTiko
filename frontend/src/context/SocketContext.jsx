@@ -18,7 +18,7 @@ export const SocketContextProvider = ({ children }) => {
         if(usr){
             const user = JSON.parse(usr)
 
-            const socket = io("http://localhost:8001", {
+            const socket = io("https://chattiko.onrender.com", {
                 query: {
                     userId: user?._id
                 }
