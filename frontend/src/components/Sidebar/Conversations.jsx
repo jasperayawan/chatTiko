@@ -31,7 +31,7 @@ const Conversations = () => {
   return (
     <div
       ref={containerRef}
-      className='flex flex-col gap-y-2 overflow-y-auto scrollbar'
+      className='flex flex-row md:flex-col gap-2 overflow-y-auto scrollbar'
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

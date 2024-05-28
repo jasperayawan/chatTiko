@@ -4,7 +4,7 @@ import Container from '../../components/messages/Container'
 
 const Home = () => {
   return (
-    <div className='h-screen w-full flex flex-row bg-[#131313] rounded-2xl'>
+    <div className='h-screen overflow-auto w-full flex flex-col md:flex-row bg-[#131313] rounded-2xl'>
         <Sidebar />
         <Container />
     </div>
