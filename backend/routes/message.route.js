@@ -1,4 +1,4 @@
-const { message, getMessages } = require("../Controller/message.controller");
+const { message, getMessages } = require("../controllers/message.controller");
 const protectRoute = require("../middleware/protectRoute");
 
 const router = require("express").Router();
