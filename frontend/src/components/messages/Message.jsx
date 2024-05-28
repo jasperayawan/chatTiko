@@ -22,7 +22,7 @@ const Message = ({ message, selectedConversation }) => {
             <img src={profilePic} alt="" />
         </div>
       </div>
-      <div className={`chat-bubble ${bubbleBgColor}`}>{message.message}</div>
+      <div className={`chat-bubble flex flex-wrap text-sm md:text-base ${bubbleBgColor}`}>{message.message}</div>
     </div>
   )
 }

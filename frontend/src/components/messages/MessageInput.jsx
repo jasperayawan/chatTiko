@@ -32,7 +32,7 @@ const MessageInput = ({ messages, selectedConversation }) => {
         onChange={(e) => setMessage(e.target.value)}
         className="w-full bg-[#2e333d] px-5 py-2 rounded-xl text-white"
       />
-      <button type="submit" disabled={loading} className="btn bg-[#6b8afd]">
+      <button type="submit" disabled={loading} className="btn bg-[#6b8afd] outline-none">
         {loading ? <Loader color="#1e1e1e" /> : <Send color="#ffffff" />}
       </button>
     </form>

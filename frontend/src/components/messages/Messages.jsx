@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import useGetMessages from '../../hooks/useGetMessages'
 import { setMessages } from '../../state/reducers/useConversation.slice'
 import useListenMessages from '../../hooks/useListenMessages'
+import Topbar from './Topbar'
 
 const Messages = ({ selectedConversation }) => {
   const { loading, getMessages } = useGetMessages(); 
@@ -19,16 +20,17 @@ const Messages = ({ selectedConversation }) => {
   },[selectedConversation]) 
 
   return (
-    <div className='h-full overflow-auto scrollbar pb-6'>
+    <div className='h-full overflow-y-auto scrollbar pb-6'>
       {message.length > 0 ? (
         <>
+          <Topbar selectedConversation={selectedConversation}/>
         {message.map((msg,idx) => (
           <Message key={idx} message={msg} selectedConversation={selectedConversation}/>
         ))}
         </>
       ) : (
         <div className="flex justify-center items-center h-full w-full">
-          <span>Send a message to start the</span>
+          <span>Send a message to start the conversation</span>
         </div>
       )}
     </div>
