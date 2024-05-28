@@ -14,6 +14,7 @@ const userRoutes = require("./routes/user.route")
 dotenv.config();
 const port = process.env.PORT || 8001;
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParse())
@@ -23,11 +24,12 @@ app.use("/api/auth", authRoutes)
 app.use("/api/message", messageRoutes)
 app.use("/api/user", userRoutes)
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")))
+// Serve static files from the frontend/dist directory
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"))
-})
+    res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+});
 
 server.listen(port, () => {
     console.log("server listening to port:", port)
