@@ -12,7 +12,7 @@ const Container = () => {
   const message = useSelector((state) => state.UseConversation.messages);
 
   return (
-    <div className='flex flex-col flex-grow p-5'>
+    <div className='flex flex-col flex-[1] p-5'>
       <Topbar selectedConversation={selectedConversation}/>
       <Messages selectedConversation={selectedConversation}/>
       <MessageInput messages={message} selectedConversation={selectedConversation} />
